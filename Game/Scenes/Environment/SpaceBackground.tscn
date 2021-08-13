@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Environment/SpaceBackground.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Environment/Background/Background.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Background/Galaxy.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Environment/Background/StarsMedium.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Environment/Background/Planets.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Environment/Background/Smoke.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Environment/Background/LargeStars.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Environment/Background/StarsBright.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Environment/Background/PurpleSmoke.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Environment/Background/StarsLight.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Environment/Background/MediumStars.png" type="Texture" id=11]
+
+[node name="SpaceBackground" type="ParallaxBackground"]
+scale = Vector2( 1.1, 1.1 )
+transform = Transform2D( 1.1, 0, 0, 1.1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Background" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="Background"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Smoke" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="Smoke"]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="PurpleSmoke" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="PurpleSmoke"]
+texture = ExtResource( 9 )
+centered = false
+
+[node name="StarsLight" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="StarsLight"]
+texture = ExtResource( 10 )
+centered = false
+
+[node name="StarsMedium" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="StarsMedium"]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="StarsBright" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="StarsBright"]
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Galaxy" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="Galaxy"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="MediumStars" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="MediumStars"]
+texture = ExtResource( 11 )
+centered = false
+
+[node name="LargeStars" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="LargeStars"]
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Planets" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1024, 600 )
+
+[node name="Sprite" type="Sprite" parent="Planets"]
+texture = ExtResource( 5 )
+centered = false
