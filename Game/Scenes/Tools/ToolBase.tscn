@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Tools/ToolBase.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Character/Player/Player.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Glassibox16.tres" type="DynamicFont" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+resource_local_to_scene = true
+extents = Vector2( 16, 24 )
+
+[node name="ToolBase" type="Area2D"]
+script = ExtResource( 1 )
+texture = "res://Assets/Character/Player/Player.png"
+group = "Hi"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -24 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -24 )
+shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_top = -62.0
+margin_bottom = -48.0
+custom_fonts/font = ExtResource( 3 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="." to="." method="_on_ToolBase_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_ToolBase_body_exited"]
